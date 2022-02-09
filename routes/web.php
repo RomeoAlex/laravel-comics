@@ -14,5 +14,9 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+
+    // uso config per prendere comics.php
+    $comics_array = config('comics');
+    
+    return view('home');
 });
