@@ -23,8 +23,9 @@ Route::get('/', function () {
   ];
     
     return view('home', $data );
-});
+})->name('home');
 // aggiungo la variabile per catturare l'id dell'array su comics.php il valore sarà riportato come stringa
+
 Route::get('/single-comic/{id}', function ($id) {
   // uso config per prendere comics.php
   $comics_array = config('comics');
@@ -38,6 +39,7 @@ Route::get('/single-comic/{id}', function ($id) {
     // perciò
     if($comic['id'] == $id ){
       $comic_single = $comic;
+      
     }
   }
   // nel caso si ricercasse nella barra degli indirizzi un id che non esiste
@@ -52,15 +54,15 @@ Route::get('/single-comic/{id}', function ($id) {
   $comic_artist = [];
   $comic_writer = [];
   // scorro l'array associativo $comic_array per trovare i due array che mi servono
-  foreach($comics_array as $comics){
-    if($comics['artists']){
-      $comic_artist[] = $comics['artists'];
+  foreach($comics_array as $comics_specs){
+    if($comics_specs['artists']){
+      $comic_artist[] = $comics_specs['artists'];
     }
   }
-  
-  foreach($comics_array as $comics){
-    if($comics['writers']){
-      $comic_writer[] = $comics['writers'];
+
+  foreach($comics_array as $comics_specs){
+    if($comics_specs['writers']){
+      $comic_writer[] = $comics_specs['writers'];
       
     }
   }
@@ -70,9 +72,9 @@ Route::get('/single-comic/{id}', function ($id) {
   $data = [
     // per utilizzare l'array $comic_single preso dal ciclo devo convertirlo per poi passarlo su blade
     'comic' => $comic_single,
-    'artists' => $comic_artist,
-    'writers' => $comic_artist,
+    'artists_list' => $comic_artist,
+    'writers_list' => $comic_writer,
   ];
   
   return view('single-comic', $data);
-});
+})->name('single-comic');

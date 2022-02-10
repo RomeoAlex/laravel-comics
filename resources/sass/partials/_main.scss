@@ -9,6 +9,7 @@ main{
         background: linear-gradient(to bottom, $primary_color, $primary_color 15%, white 0%);
     }
     .my_container{
+        position: relative;
         .comics-wrapper{
             display: flex;
             flex-wrap: wrap;
@@ -51,11 +52,13 @@ main{
                     }
                 }
         }
-        
+        .comic-front{
+        position: absolute;
+        top:-250px;
+        left:0;
+        }  
     }
-    .comic-front{
-        
-    }
+    
     .specs_main{
         background-color: #f6f6f6;
         width: 100%;

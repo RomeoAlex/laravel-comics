@@ -10,10 +10,14 @@
             <div class="menu">
                 <ul>
                     <li>
-                        <a href="home"></a>
+                        <a href="{{ route('home') }}">
+                            HOME
+                        </a>
                     </li>
                     <li>
-                        <a href="comic"></a>
+                        <a href="comic">
+                            SHOP
+                        </a>
                     </li>
                 </ul>
             </div>

@@ -60,6 +60,10 @@ main.blue_white {
   background: linear-gradient(to bottom, #0282f9, #0282f9 15%, white 0%);
 }
 
+main .my_container {
+  position: relative;
+}
+
 main .my_container .comics-wrapper {
   display: flex;
   flex-wrap: wrap;
@@ -110,6 +114,12 @@ main .my_container .comic-description-wrapper .advertisement {
 
 main .my_container .comic-description-wrapper .advertisement img {
   float: right;
+}
+
+main .my_container .comic-front {
+  position: absolute;
+  top: -250px;
+  left: 0;
 }
 
 main .specs_main {

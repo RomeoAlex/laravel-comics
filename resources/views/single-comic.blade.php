@@ -9,22 +9,11 @@
 @endsection
 {{-- richiamo main_content dal layout --}}
 @section('main_content')
-    
-    {{-- <div class="my_container">
-        <div class="comics-wrapper">
-            @foreach ($comics as $comic)
-                <div class="single_comic">  
-                    <img src="{{ $comic['thumb'] }}" alt="{{ $comic['title'] }}">
-                    <span>{{ $comic['series'] }}</span>
-                </div>
-            @endforeach
-          
-
-        </div>
-    </div> --}}
+<div class="my_container">
     <div class="comic-front">
-        
+        <img src="{{ $comic['thumb'] }}" alt="">
     </div>
+</div>
     <div class="my_container">
         <div class="comic-description-wrapper">
             <div class="comic-description">
