@@ -28,6 +28,8 @@ Route::get('/', function () {
 Route::get('/single-comic/{id}', function ($id) {
   // uso config per prendere comics.php
   $comics_array = config('comics');
+  // creo variabile per mostrare i singoli fumetti al posto della lista nel main
+  $comic_to_show = false;
   //inizializzo la variabile del fumetto che prenderò dall'array 
   $comic_single = [];
   // ciclo l'array per trovare l'id del fumetto
@@ -38,13 +40,38 @@ Route::get('/single-comic/{id}', function ($id) {
       $comic_single = $comic;
     }
   }
+  // nel caso si ricercasse nella barra degli indirizzi un id che non esiste
+  // if(!$comic_to_show){
+  //   abort('404');
+  // }
+
+
   // controllo con dd
   // dd($comic_single );
-
+  // creo due array per gli artisti e gli scrittori
+  $comic_artist = [];
+  $comic_writer = [];
+  // scorro l'array associativo $comic_array per trovare i due array che mi servono
+  foreach($comics_array as $comics){
+    if($comics['artists']){
+      $comic_artist[] = $comics['artists'];
+    }
+  }
+  
+  foreach($comics_array as $comics){
+    if($comics['writers']){
+      $comic_writer[] = $comics['writers'];
+      
+    }
+  }
+  // stampa
+  // dd($comic_writer); 
   // devo rimandare i dati forniti a blade per visualizzarli in pagina
   $data = [
     // per utilizzare l'array $comic_single preso dal ciclo devo convertirlo per poi passarlo su blade
     'comic' => $comic_single,
+    'artists' => $comic_artist,
+    'writers' => $comic_artist,
   ];
   
   return view('single-comic', $data);

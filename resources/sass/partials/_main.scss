@@ -22,5 +22,64 @@ main{
                 }
             }
         }
+        .comic-description-wrapper{
+            display: flex;
+            padding-top:150px;
+            justify-content: space-between;
+                .comic-description{
+                    width: 50%;
+                    .price-bar{
+                        background-color:#55ba59;
+                        border-bottom: 1px solid #4daa51;
+                        height: 60px;
+                        width:100%;
+                        .price-box{
+                            width:80%;
+                            span a {
+                                padding:25px;
+                            }
+                        }
+                        .check-store{
+                            width:20%;
+                        }
+                    }
+                }
+                .advertisement{
+                    width: 50%;
+                    img{
+                        float:right;
+                    }
+                }
+        }
+        
+    }
+    .comic-front{
+        
+    }
+    .specs_main{
+        background-color: #f6f6f6;
+        width: 100%;
+        border-top: 1px solid #eeeeee;
+        margin-top: 50px ;
+        .page_cont{
+
+            .specs_container{
+                display: flex;
+                .specs{
+                    width:50%;
+                    h1{
+                        padding:  20px 0px;
+                        
+                    }
+                    div{
+                        border-top: 1px solid #eeeeee;
+                        h3{
+                            display: inline;
+                        }
+                    }
+                }
+                
+            }
+        }
     }
 }

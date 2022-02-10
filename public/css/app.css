@@ -75,3 +75,67 @@ main .my_container .comics-wrapper .single_comic span {
   width: 80%;
 }
 
+main .my_container .comic-description-wrapper {
+  display: flex;
+  padding-top: 150px;
+  justify-content: space-between;
+}
+
+main .my_container .comic-description-wrapper .comic-description {
+  width: 50%;
+}
+
+main .my_container .comic-description-wrapper .comic-description .price-bar {
+  background-color: #55ba59;
+  border-bottom: 1px solid #4daa51;
+  height: 60px;
+  width: 100%;
+}
+
+main .my_container .comic-description-wrapper .comic-description .price-bar .price-box {
+  width: 80%;
+}
+
+main .my_container .comic-description-wrapper .comic-description .price-bar .price-box span a {
+  padding: 25px;
+}
+
+main .my_container .comic-description-wrapper .comic-description .price-bar .check-store {
+  width: 20%;
+}
+
+main .my_container .comic-description-wrapper .advertisement {
+  width: 50%;
+}
+
+main .my_container .comic-description-wrapper .advertisement img {
+  float: right;
+}
+
+main .specs_main {
+  background-color: #f6f6f6;
+  width: 100%;
+  border-top: 1px solid #eeeeee;
+  margin-top: 50px;
+}
+
+main .specs_main .page_cont .specs_container {
+  display: flex;
+}
+
+main .specs_main .page_cont .specs_container .specs {
+  width: 50%;
+}
+
+main .specs_main .page_cont .specs_container .specs h1 {
+  padding: 20px 0px;
+}
+
+main .specs_main .page_cont .specs_container .specs div {
+  border-top: 1px solid #eeeeee;
+}
+
+main .specs_main .page_cont .specs_container .specs div h3 {
+  display: inline;
+}
+
