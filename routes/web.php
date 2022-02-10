@@ -19,7 +19,7 @@ Route::get('/', function () {
     
   $data = [
     // per utilizzare l'array $comic_array preso dal config devo convertirlo per poi passarlo su blade
-    'comics_array' => $comics_array,
+    'comics' => $comics_array,
   ];
     
     return view('home', $data );
