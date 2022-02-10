@@ -5,12 +5,12 @@
     DC COMICS
 @endsection
 @section('main_classes')
-    black_rear
+    blue_white
 @endsection
 {{-- richiamo main_content dal layout --}}
 @section('main_content')
     
-    <div class="my_container">
+    {{-- <div class="my_container">
         <div class="comics-wrapper">
             @foreach ($comics as $comic)
                 <div class="single_comic">  
@@ -21,7 +21,7 @@
           
 
         </div>
-    </div>
+    </div> --}}
 
 
 @endsection

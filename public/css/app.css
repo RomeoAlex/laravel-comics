@@ -47,23 +47,30 @@ a {
   background-position: center;
 }
 
-.main_section {
-  background-color: #303030;
+main {
   width: 100%;
   height: 600px;
 }
 
-.main_section .my_container .comics-wrapper {
+main.black_rear {
+  background-color: #303030;
+}
+
+main.blue_white {
+  background: linear-gradient(to bottom, #0282f9, #0282f9 20%, #0282f9 20%, white 80%, white 80%);
+}
+
+main .my_container .comics-wrapper {
   display: flex;
   flex-wrap: wrap;
 }
 
-.main_section .my_container .comics-wrapper .single_comic {
+main .my_container .comics-wrapper .single_comic {
   width: 16.6666666667% -30px;
   margin: 15px;
 }
 
-.main_section .my_container .comics-wrapper .single_comic span {
+main .my_container .comics-wrapper .single_comic span {
   display: block;
   width: 80%;
 }

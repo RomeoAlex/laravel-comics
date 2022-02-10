@@ -1,7 +1,13 @@
-.main_section{
-    background-color: $third_color;
+main{
+    
     width: 100%;
     height: 600px;
+    &.black_rear{
+        background-color: $third_color;
+    }
+    &.blue_white{
+        background: linear-gradient(to bottom, $primary_color, $primary_color 20%,$primary_color 20%, white 80%, white 80%);
+    }
     .my_container{
         .comics-wrapper{
             display: flex;

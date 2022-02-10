@@ -15,7 +15,8 @@
     {{-- includo l'header da partials --}}
     @include('partials.header')
     @include('partials.jumbotron')
-    <main>
+    {{-- classe nel main con yeld --}}
+    <main class="@yield('main_classes')">
         @yield('main_content')
     </main>
     {{-- includo il footer da partials --}}

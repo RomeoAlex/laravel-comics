@@ -10,7 +10,10 @@
             <div class="menu">
                 <ul>
                     <li>
-                        CHARACTER
+                        <a href="home"></a>
+                    </li>
+                    <li>
+                        <a href="comic"></a>
                     </li>
                 </ul>
             </div>

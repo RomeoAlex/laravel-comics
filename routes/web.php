@@ -24,3 +24,15 @@ Route::get('/', function () {
     
     return view('home', $data );
 });
+
+Route::get('/single-comic', function () {
+  // uso config per prendere comics.php
+  $comics_array = config('comics');
+  
+$data = [
+  // per utilizzare l'array $comic_array preso dal config devo convertirlo per poi passarlo su blade
+  'comics' => $comics_array,
+];
+  
+  return view('single-comic', $data );
+});
