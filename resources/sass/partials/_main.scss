@@ -7,11 +7,12 @@
             display: flex;
             flex-wrap: wrap;
             .single_comic{
-                width:calc( 100% / 6) -20px;
-                margin: 10px;
+                width:calc( 100% / 6) -30px;
+                margin: 15px;
+                
                 span{
                     display: block;
-                    
+                    width: 80%;
                 }
             }
         }
