@@ -7,7 +7,12 @@
 
 {{-- richiamo main_content dal layout --}}
 @section('main_content')
-    <h1>
-        SONO LA HOME_PAGE
-    </h1>
+<div class="main-section">
+    <div class="my_container">
+        <div class="comics-wrapper">
+            
+        </div>
+    </div>
+</div>
+
 @endsection

@@ -14,9 +14,13 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-
     // uso config per prendere comics.php
     $comics_array = config('comics');
     
-    return view('home');
+  $data = [
+    // per utilizzare l'array $comic_array preso dal config devo convertirlo per poi passarlo su blade
+    'comics_array' => $comics_array,
+  ];
+    
+    return view('home', $data );
 });
