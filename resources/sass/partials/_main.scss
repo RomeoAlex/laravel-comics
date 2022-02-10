@@ -6,7 +6,7 @@ main{
         background-color: $third_color;
     }
     &.blue_white{
-        background: linear-gradient(to bottom, $primary_color, $primary_color 20%,$primary_color 20%, white 80%, white 80%);
+        background: linear-gradient(to bottom, $primary_color, $primary_color 15%, white 0%);
     }
     .my_container{
         .comics-wrapper{

@@ -22,6 +22,8 @@
 
         </div>
     </div> --}}
-
+    <div>
+        {{ $comic['title']}}
+    </div>
 
 @endsection

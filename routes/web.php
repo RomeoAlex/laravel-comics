@@ -24,15 +24,28 @@ Route::get('/', function () {
     
     return view('home', $data );
 });
-
-Route::get('/single-comic', function () {
+// aggiungo la variabile per catturare l'id dell'array su comics.php il valore sarà riportato come stringa
+Route::get('/single-comic/{id}', function ($id) {
   // uso config per prendere comics.php
   $comics_array = config('comics');
+  //inizializzo la variabile del fumetto che prenderò dall'array 
+  $comic_single = [];
+  // ciclo l'array per trovare l'id del fumetto
+  foreach($comics_array as $comic ){
+    // attenzione l'id dell'array comic è un int e il nostro id variabile è una stringa!!
+    // perciò
+    if($comic['id'] == $id ){
+      $comic_single = $comic;
+    }
+  }
+  // controllo con dd
+  // dd($comic_single );
+
+  // devo rimandare i dati forniti a blade per visualizzarli in pagina
+  $data = [
+    // per utilizzare l'array $comic_single preso dal ciclo devo convertirlo per poi passarlo su blade
+    'comic' => $comic_single,
+  ];
   
-$data = [
-  // per utilizzare l'array $comic_array preso dal config devo convertirlo per poi passarlo su blade
-  'comics' => $comics_array,
-];
-  
-  return view('single-comic', $data );
+  return view('single-comic', $data);
 });
